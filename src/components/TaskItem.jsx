@@ -46,8 +46,8 @@ const TaskItem = ({task}) => {
         </button>
 
         <button
-          className={'btn ${styles.delete}'}
-          aria-label={'Delete ${task.name} Task'}
+          className={`btn ${styles.delete}`}
+          aria-label={`Delete ${task.name} Task`}
           //onClick={}
         >
           <TrashIcon width={24} height={24} />
