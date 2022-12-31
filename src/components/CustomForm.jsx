@@ -1,9 +1,16 @@
-
 const CustomForm = () => {
-  return (
-    <div>
 
-    </div>
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log(e);
+  }
+
+
+  return (
+    <form className="todo"
+    onSubmit={handleFormSubmit}
+    >
+    </form>
   )
 }
 
