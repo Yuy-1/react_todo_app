@@ -20,8 +20,8 @@ const TaskItem = ({task}) => {
         <input
           type="checkbox"
           className={styles.checkbox}
-          checked={task.checked}
-          //onChange={}
+          checked={isChecked}
+          onChange={handleCheckboxChange}
           name={task.name}
           id={task.id}
         />
