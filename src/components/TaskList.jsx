@@ -1,7 +1,21 @@
-const TaskList = () => {
-  return (
-    <div>
+// component import
+import TaskItem from ".TaskItem"
 
-    </div>
+// styles
+import styles from "./TaskList.module.css"
+
+const TaskList = ({tasks}) => {
+  return (
+    <ul className ={styles.tasks}>
+      {tasks.map(task => {
+        <TaskItem
+          key={task.id}
+          task={task}
+        />
+      })
+      }
+    </ul>
   )
 }
+
+export default TaskList
