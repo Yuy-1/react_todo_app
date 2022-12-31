@@ -2,10 +2,12 @@ import { useState } from 'react'
 
 // custom components
 import CustomForm from "./components/CustomForm";
+import EditForm from "./components/EditForm"
 import TaskList from "./components/TaskList"
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [editedTask, setEditedTask] = useState([null])
 
   const addTask = (task) => {
     setTasks(prevState => [...prevState, task])
@@ -28,6 +30,10 @@ function App() {
       <header>
         <h1>My Task List</h1>
       </header>
+      <EditForm
+        editedTask={editedTask}
+        updateTask={updateTask}
+      />
       <CustomForm addTask={addTask} />
       {tasks && (
         <TaskList
