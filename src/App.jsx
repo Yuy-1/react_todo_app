@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 // custom components
 import CustomForm from "./components/CustomForm.jsx";
+import TaskList from "./components/TaskList.jsx"
 
 function App() {
   const [task, setTask] = useState([]);
