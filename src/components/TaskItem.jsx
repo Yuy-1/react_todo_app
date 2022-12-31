@@ -11,7 +11,7 @@ const TaskItem = ({task}) => {
   const [isChecked, setIsChecked] = useState(task.checked);
 
   const handleCheckboxChange = (e) =>{
-    setIsChecked(!)
+    setIsChecked(!isChecked);
   }
 
   return (
