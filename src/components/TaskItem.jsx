@@ -1,8 +1,13 @@
+
+
+// styles
+import styles from "./TaskItem.module.css"
+
 const TaskItem = ({task}) => {
   return (
-    <div>
-      {task.name}
-    </div>
+    <li className={styles.task}>
+
+    </li>
   )
 }
 
