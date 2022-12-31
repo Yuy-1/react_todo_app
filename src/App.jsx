@@ -33,6 +33,7 @@ function App() {
         <TaskList
           tasks={tasks}
           deleteTask={deleteTask}
+          toggleTask={toggleTask}
         />
       )}
     </div>
