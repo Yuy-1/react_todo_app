@@ -39,7 +39,7 @@ const TaskItem = ({task}) => {
       <div className={styles["task-group"]}>
         <button
           className="btn"
-          aria-label={`Update ${task.name} Task``}
+          aria-label={`Update ${task.name} Task`}
           //onClick={}
         >
           <PencilSquareIcon width={24} height={24} />
@@ -48,7 +48,6 @@ const TaskItem = ({task}) => {
         <button
           className={`btn ${styles.delete}`}
           aria-label={`Delete ${task.name} Task`}
-          //onClick={}
         >
           <TrashIcon width={24} height={24} />
         </button>
