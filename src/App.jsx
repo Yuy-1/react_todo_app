@@ -4,10 +4,10 @@ import { useState } from 'react'
 import CustomForm from "./components/CustomForm.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [task, setTask] = useState([]);
 
   const addTask = (task) => {
-    console.log(task)
+    setTask(prevState => [...prevState, task])
   }
 
   return (
@@ -16,6 +16,7 @@ function App() {
         <h1>My Task List</h1>
       </header>
       <CustomForm addTask={addTask} />
+      {tasks && <TaskList />}
     </div>
   )
 }
