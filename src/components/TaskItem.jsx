@@ -1,7 +1,8 @@
-
-
 // styles
 import styles from "./TaskItem.module.css"
+
+// library imports
+import { CheckIcon } from "@heroicons/react/24/outline/index"
 
 const TaskItem = ({task}) => {
   return (
@@ -9,6 +10,7 @@ const TaskItem = ({task}) => {
       <div className={styles["task-group"]}>
         <input
           type="checkbox"
+          className={styles.checkbox}
           checked={task.checked}
           //onChange={}
           name={task.name}
@@ -20,7 +22,7 @@ const TaskItem = ({task}) => {
         >
           {task.name}
           <p className={styles.checkmark}>
-
+            <CheckIcon strokeWidth={2} width={24} height={24}/>
           </p>
         </label>
       </div>
