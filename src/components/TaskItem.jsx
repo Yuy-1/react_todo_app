@@ -1,10 +1,19 @@
+import {useState} from "react";
+
 // styles
 import styles from "./TaskItem.module.css"
 
 // library imports
 import { CheckIcon } from "@heroicons/react/24/outline/index"
 
+
 const TaskItem = ({task}) => {
+  const [isChecked, setIsChecked] = useState(task.checked);
+
+  const handleCheckboxChange = (e) =>{
+    setIsChecked(!)
+  }
+
   return (
     <li className={styles.task}>
       <div className={styles["task-group"]}>
