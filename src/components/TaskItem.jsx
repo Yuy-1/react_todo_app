@@ -4,7 +4,8 @@ import {useState} from "react";
 import styles from "./TaskItem.module.css"
 
 // library imports
-import { CheckIcon } from "@heroicons/react/24/outline/index"
+import {CheckIcon, TrashIcon,} from "@heroicons/react/24/outline/index"
+import { PencilSquareIcon } from "@heroicons/react/24/outline/index";
 
 
 const TaskItem = ({task}) => {
@@ -35,7 +36,24 @@ const TaskItem = ({task}) => {
           </p>
         </label>
       </div>
+      <div className={styles["task-group"]}>
+        <button
+          className="btn"
+          aria-label={'Update ${task.name} Task'}
+          //onClick={}
+        >
+          <PencilSquareIcon width={24} height={24} />
+        </button>
 
+        <button
+          className={'btn ${styles.delete}'}
+          aria-label={'Delete ${task.name} Task'}
+          //onClick={}
+        >
+          <TrashIcon width={24} height={24} />
+        </button>
+
+      </div>
     </li>
   )
 }
