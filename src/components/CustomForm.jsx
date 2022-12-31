@@ -9,7 +9,7 @@ const CustomForm = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+    setTask("")
   }
 
   return (
