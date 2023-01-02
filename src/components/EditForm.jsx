@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 //library imports
 import { CheckIcon } from "@heroicons/react/24/outline/index"
 
-const EditForm = ({ editedTask, updateTask }) => {
+const EditForm = ({ editedTask, updateTask, closeEditMode }) => {
   const [updatedTaskName, setUpdatedTaskName] = useState(editedTask.name);
+
+  useEffect(() => {
+    const closeModalIfEscaped = (e) => {
+      e.key === "Escape" && closeEditMode();
+    }
+    window.addEventListener('keydown', closeModalIfEscaped)
+    }, [])
+
 
 
   const handleFormSubmit = (e) => {
