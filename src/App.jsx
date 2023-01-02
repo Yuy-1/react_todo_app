@@ -34,6 +34,10 @@ function App() {
     // close the edit mode
   }
 
+  const enterEditMode = (task) => {
+    setEditedTask(task);
+  }
+
   return (
     <div className="container">
       <header>
@@ -49,6 +53,7 @@ function App() {
           tasks={tasks}
           deleteTask={deleteTask}
           toggleTask={toggleTask}
+          enterEditMode={enterEditMode}
         />
       )}
     </div>
