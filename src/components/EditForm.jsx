@@ -11,7 +11,11 @@ const EditForm = ({ editedTask, updateTask, closeEditMode }) => {
       e.key === "Escape" && closeEditMode();
     }
     window.addEventListener('keydown', closeModalIfEscaped)
-    }, [])
+
+    return () => {
+      window.removeEventListener('keydown', closeModalIfEscaped)
+    }
+  }, [closeEditMode])
 
 
 
