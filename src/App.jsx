@@ -32,7 +32,12 @@ function App() {
         ? {...t, name: task.name}
         : t
     )))
-    // close the edit mode
+    closeEditMode();
+  }
+
+  const closeEditMode = () => {
+    setIsEditing(false);
+    // previous state focus
   }
 
   const enterEditMode = (task) => {
