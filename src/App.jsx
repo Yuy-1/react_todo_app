@@ -25,6 +25,15 @@ function App() {
     )))
   }
 
+  const updateTask = (task) => {
+    setTasks(prevState => prevState.map(t => (
+      t.id === task.id
+        ? {...t, name: task.name}
+        : t
+    )))
+    // close the edit mode
+  }
+
   return (
     <div className="container">
       <header>
