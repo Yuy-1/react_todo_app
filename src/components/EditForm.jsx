@@ -3,12 +3,13 @@ import { useState } from "react";
 //library imports
 import { CheckIcon } from "@heroicons/react/24/outline/index"
 
-const EditForm = ({ editedTask }) => {
+const EditForm = ({ editedTask, updateTask }) => {
   const [updatedTaskName, setUpdatedTaskName] = useState(editedTask.name);
 
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    //updateTask()
   }
 
   return (
